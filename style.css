@@ -1,0 +1,26 @@
+body {
+    background: #000;
+    color: #fff;
+}
+h2 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+.grid-container img {
+    max-width: 99%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #3D3D3D;
+}
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
