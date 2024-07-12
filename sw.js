@@ -3,7 +3,7 @@ const assets = [
     '/',
     '/index.html',
     '/style.css',
-    '/manifest.css',
+    '/manifest.json',
     '/sw.js',
     '/icon2.png',
     '/js/app.js',
@@ -22,21 +22,21 @@ const assets = [
     '/Games/2024-07/EBW.html',
     '/Games/2024-07/ESF.html',
     '/Games/2024-07/GBG.html',
-    '/Games/2024-07/MMVWM.html',
+    '/Games/2024-07/MMVWM.html'
 ];
 self.addEventListener('install', evt => {
-    //console.log('service worker installed');
+    console.log('service worker installed');
     evt.waitUntil(
       caches.open(staticCacheName).then((cache) => {
         console.log('caching shell assets');
-        cache.addAll(assets);
+        cache.addAll(assets).then(x=>console.log("it is now cached",x)).catch(y=>console.log("catch",y));
       })
     );
   });
   
   // activate event
   self.addEventListener('activate', evt => {
-    //console.log('service worker activated');
+    console.log('service worker activated');
   });
   
   // fetch event
@@ -44,6 +44,7 @@ self.addEventListener('install', evt => {
     //console.log('fetch event', evt);
     evt.respondWith(
         caches.match(evt.request).then(cacheRes => {
+          console.log("fetch",evt,cacheRes);
             return cacheRes || fetch(evt.request)
         })
     )
