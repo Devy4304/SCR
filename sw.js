@@ -7,6 +7,7 @@ const assets = [
   "/sw.js",
   "/icon2.png",
   "/js/app.js",
+  "/ECI.html",
   "/Images/2024-07/AB.JPG",
   "/Images/2024-07/DKC.jpg",
   "/Images/2024-07/DTT.jpg",
