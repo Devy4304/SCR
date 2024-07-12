@@ -55,4 +55,12 @@ h2 {
         text-align: center;
         align-items: center;
     }
+    h2 {
+        font-size: 90px;
+    }
+    .button {
+        font-size: 40px;
+        padding: 30px 64px;
+        border-radius: 20px;
+    }
 }
