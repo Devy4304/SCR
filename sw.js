@@ -18,6 +18,7 @@ const assets = [
   "/Images/2024-07/MMVWM.jpg",
   "/Images/2024-07/IOE.jpg",
   "/Images/2024-07/EC.jpg",
+  "/Images/2024-07/EMF.jpg",
   "/Games/2024-07/AB.html",
   "/Games/2024-07/DKC.html",
   "/Games/2024-07/DTT.html",
@@ -28,6 +29,7 @@ const assets = [
   "/Games/2024-07/MMVWM.html",
   "/Games/2024-07/IOE.html",
   "/Games/2024-07/EC.html",
+  "/Games/2024-07/EMF.html",
 ];
 self.addEventListener("install", (evt) => {
   console.log("service worker installed");
